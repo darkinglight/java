@@ -1,5 +1,8 @@
 import java.util.Arrays;
 import java.io.*;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.In;
 
 public class BinarySearch
 {
@@ -18,7 +21,7 @@ public class BinarySearch
 
     public static void main(String[] args)
     {
-        int[] whitelist = StdIn.readInts(args[0]);
+        int[] whitelist = In.readInts(args[0]);
 
         Arrays.sort(whitelist);
 
