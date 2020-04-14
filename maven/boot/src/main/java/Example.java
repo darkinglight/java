@@ -1,6 +1,8 @@
 import com.google.common.collect.Sets;
+import exception.TestException;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
@@ -56,6 +58,11 @@ public class Example {
         System.out.println(result2);
         Boolean b2 = sets.isEmpty();
         return result.toString();
+    }
+
+    @RequestMapping("/exception")
+    ResponseEntity<Object> exception() throws TestException {
+        throw new TestException();
     }
 
     public static void main(String[] args) throws Exception {
