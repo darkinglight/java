@@ -3,6 +3,8 @@ package com.light.springboot.demo.controller;
 import com.light.springboot.demo.exception.TestException;
 import com.light.springboot.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -32,9 +34,17 @@ public class TestController {
     @Autowired
     private TestService testService;
 
+    @Autowired
+    private MessageSource messageSource;
+
     @RequestMapping("/")
     public ResponseEntity<Object> index() {
         return new ResponseEntity<>("index", HttpStatus.OK);
+    }
+
+    @RequestMapping("/internal")
+    public String internal() {
+        return messageSource.getMessage("welcome.text", null, LocaleContextHolder.getLocale());
     }
 
     @RequestMapping("/exception")
