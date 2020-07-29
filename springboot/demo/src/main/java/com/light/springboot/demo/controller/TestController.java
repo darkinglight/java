@@ -23,7 +23,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @RestController
 public class TestController {
@@ -39,7 +43,12 @@ public class TestController {
 
     @RequestMapping("/")
     public ResponseEntity<Object> index() {
-        return new ResponseEntity<>("index", HttpStatus.OK);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(null);
+        list.add(2);
+        list = list.stream().filter(Objects::nonNull).collect(Collectors.toList());
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
     @RequestMapping("/internal")
