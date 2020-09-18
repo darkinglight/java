@@ -4,3 +4,5 @@ https://www.cnblogs.com/davenkin/p/advanced-maven-multi-module-vs-inheritance.ht
 https://fangjian0423.github.io/2017/05/10/springboot-context-refresh/
 
 https://www.springcloud.cc/spring-boot.html#boot-features-application-events-and-listeners
+
+https://developer.aliyun.com/article/56
