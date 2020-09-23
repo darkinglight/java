@@ -6,3 +6,5 @@ https://fangjian0423.github.io/2017/05/10/springboot-context-refresh/
 https://www.springcloud.cc/spring-boot.html#boot-features-application-events-and-listeners
 
 https://developer.aliyun.com/article/56
+
+https://zhuanlan.zhihu.com/p/90404828
