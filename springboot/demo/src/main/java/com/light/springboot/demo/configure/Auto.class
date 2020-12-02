@@ -1,0 +1,12 @@
+package com.light.springboot.demo.configure;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Auto {
+    @Bean
+    public MyAuto myAuto() {
+        return new MyAuto();
+    }
+}

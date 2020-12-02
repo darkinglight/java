@@ -1,0 +1,7 @@
+package com.light.springboot.demo.configure;
+
+public class MyAuto {
+    public String test() {
+        return "test";
+    }
+}
