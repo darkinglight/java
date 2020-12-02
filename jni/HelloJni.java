@@ -1,12 +1,11 @@
-public class HelloJni {
-    native void hello();
-
+public class HelloJNI {
     static {
-        System.loadLibrary("HelloJni");
+        System.loadLibrary("hello");
     }
 
-    public static void main(String args[]) {
-        HelloJni helloJni = new HelloJni();
-        helloJni.hello();
+    private native void sayHello();
+
+    public static void main(String[] args) {
+        new HelloJNI().sayHello();
     }
 }
